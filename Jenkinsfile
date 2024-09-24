@@ -4,7 +4,7 @@ pipeline {
     environment {
         // Defina a versão do Maven configurada no Jenkins
         MAVEN_HOME = tool name: 'Maven 3.x', type: 'maven'
-        PATH = "${MAVEN_HOME}/bin:${env.PATH}"
+        PATH = "${MAVEN_HOME}\\bin;${env.PATH}" // Use o separador de caminho correto para o Windows
     }
 
     stages {
@@ -18,14 +18,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Compila o projeto e executa os testes
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
                 // Executa os testes
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
