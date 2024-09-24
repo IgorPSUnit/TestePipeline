@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        // Variável que define a versão do Maven que está configurada no Jenkins
+        // Define a versão do Maven configurada no Jenkins
         MAVEN_HOME = tool name: 'Maven 3.x', type: 'maven'
         PATH = "${MAVEN_HOME}/bin:${env.PATH}"
     }
@@ -17,14 +17,14 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Compila o projeto e roda os testes
+                // Compila o projeto e executa os testes
                 sh 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
-                // Executa os testes usando Maven
+                // Executa os testes
                 sh 'mvn test'
             }
         }
@@ -38,15 +38,13 @@ pipeline {
     }
 
     post {
-            always {
-                node('master') {  // Defina o agente aqui
-                    cleanWs()  // Limpa o workspace após a execução
-                }
-            }
+        always {
+            // Limpa o workspace após a execução
+            cleanWs()
+        }
 
-            failure {
-                echo 'Pipeline failed.'
-            }
+        failure {
+            echo 'Pipeline failed.'
         }
     }
 }
