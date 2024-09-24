@@ -38,10 +38,11 @@ pipeline {
     }
 
     post {
-        always {
-            // Limpa o workspace após a execução do pipeline
-            cleanWs()
-        }
+            always {
+                node {
+                    cleanWs() // Limpa o workspace após a execução
+                }
+            }
 
         failure {
             // Envia uma notificação caso o pipeline falhe
