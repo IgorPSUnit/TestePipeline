@@ -39,14 +39,14 @@ pipeline {
 
     post {
             always {
-                node {
-                    cleanWs() // Limpa o workspace após a execução
+                node('master') {  // Defina o agente aqui
+                    cleanWs()  // Limpa o workspace após a execução
                 }
             }
 
-        failure {
-            // Envia uma notificação caso o pipeline falhe
-            echo 'Pipeline failed.'
+            failure {
+                echo 'Pipeline failed.'
+            }
         }
     }
 }
