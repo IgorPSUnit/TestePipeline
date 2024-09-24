@@ -40,7 +40,7 @@ pipeline {
     post {
         always {
             // Limpa o workspace após a execução
-            cleanWs()
+            cleanWs() // Certifique-se de que isso está dentro de um nó.
         }
 
         failure {
