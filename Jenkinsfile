@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        // Defina a versão do Maven configurada no Jenkins
+        // Define a versão do Maven configurada no Jenkins
         MAVEN_HOME = tool name: 'Maven 3.x', type: 'maven'
-        PATH = "${MAVEN_HOME}\\bin;${env.PATH}" // Use o separador de caminho correto para o Windows
+        PATH = "${MAVEN_HOME}/bin;${env.PATH}" // Use o separador de caminho correto para o Windows
     }
 
     stages {
