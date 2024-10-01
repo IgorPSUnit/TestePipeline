@@ -194,7 +194,7 @@
          - targets: ["localhost:9090"]
    ```
 
-   > **Nota:** No campo `targets`, você pode colocar outra rota, mas lembre-se de que ela deve estar disponível.
+   > **Nota:** No campo `targets`, você deve colocar a rota da instância do jenkins.
 
 5. Após fazer as alterações, execute o `prometheus.exe`.
 
