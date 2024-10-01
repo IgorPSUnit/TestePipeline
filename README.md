@@ -58,39 +58,55 @@
 
 # Criação do Trabalho no Jenkins
 
-1. Na tela de criação, dê um nome ao trabalho e escolha a opção de "Software livre" para configurar uma pipeline de forma intuitiva.
+1. Na tela de criação, dê um nome ao trabalho e escolha a opção de "Software de estilo livre" para configurar uma pipeline de forma intuitiva.
 
 2. Adicione a conexão com o repositório GitHub, marcando as opções:
 
    - **GitHub Project**: coloque o link da raiz do repositório (copiado no navegador).
+
+![Captura de tela 2024-10-01 091136](https://github.com/user-attachments/assets/f80bedd5-fa06-4952-9355-9055f5164a60)
+
+   
    - **Link HTTP para clonagem**: copie o link HTTP disponibilizado no GitHub para clonar o repositório.
+     
+![Captura de tela 2024-10-01 091240](https://github.com/user-attachments/assets/6c9409a2-d8b7-4397-9d44-87fbf67186a7)
 
 3. Opcionalmente, insira a **Branch** específica do repositório (ex: master).
+   
+![Captura de tela 2024-10-01 090836](https://github.com/user-attachments/assets/70747fb6-77f9-41b3-a7f5-bbe616b110a2)
 
-4. Salve e teste a conexão clicando em "Construir agora".
+5. Salve e teste a conexão clicando em "Construir agora".
 
 ---
 
 # Configuração de Build Automático
 
 1. Volte à configuração do trabalho, marque a opção abaixo e adicione "5 *" espaçados para que o Jenkins verifique o Git a cada minuto.
+   
+![Captura de tela 2024-10-01 092532](https://github.com/user-attachments/assets/3b9f7884-5635-452c-a2ad-af49241e48e5)
 
-2. Marque a opção para que, sempre que ocorrer um build, ele limpe o workspace do Jenkins.
-
-3. Configure para rodar o projeto Java com Maven.
+3. Marque a opção para que, sempre que ocorrer um build, ele limpe o workspace do Jenkins.
+   
+![Captura de tela 2024-10-01 092830](https://github.com/user-attachments/assets/f1988e49-35b4-4434-8851-72353de90462)
 
 ---
 
 # Configuração do Maven no Jenkins
 
 1. Após configurar o projeto Java com Maven e criar os testes, vá para as configurações do trabalho no Jenkins e busque pela opção correspondente ao Maven.
+   
+![Captura de tela 2024-10-01 094358](https://github.com/user-attachments/assets/515e4601-d4ef-452f-8906-fd1c3d6cb1bb)
 
-2. Se ocorrer erro com o Maven, configure uma versão anterior no Jenkins:
+![Captura de tela 2024-10-01 094640](https://github.com/user-attachments/assets/08d5d76f-d48f-418c-a628-fe8aeec8076e)
+
+3. Se ocorrer erro com o Maven, configure uma versão anterior no Jenkins:
 
    - Vá em: **Painel de Controle > Gerenciar Jenkins > Tools**.
    - Clique em "Adicionar Maven" e siga as orientações.
 
-3. Volte à configuração do trabalho, altere o Maven, salve e faça o build.
+   ![Captura de tela 2024-10-01 094838](https://github.com/user-attachments/assets/087b3fdd-b504-446a-bf23-f2bc352c9f8b)
+
+4. Volte à configuração do trabalho, altere o Maven, salve e faça o build.
 
 ---
 
