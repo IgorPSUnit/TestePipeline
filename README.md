@@ -158,6 +158,8 @@
 3. Clique em "Add Credentials" e adicione suas credenciais do Docker Hub.
 
 4. Preencha o modelo de acordo com suas credenciais e clique em "Create".
+   
+![Captura de tela 2024-10-01 110453](https://github.com/user-attachments/assets/aa638f7f-2f74-43a2-9c8e-26f9f7f4089a)
 
 5. Volte ao seu trabalho e faça as configurações finais para que o Jenkins jogue a imagem no Docker Hub a cada build.
 
