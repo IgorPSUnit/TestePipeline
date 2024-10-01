@@ -1,7 +1,3 @@
-Aqui está o conteúdo organizado e formatado em Markdown:
-
----
-
 # Instalação do JDK 21
 
 1. Acesse o link abaixo, selecione seu sistema operacional e faça o download do JDK:
@@ -134,5 +130,3 @@ Aqui está o conteúdo organizado e formatado em Markdown:
 5. Volte ao seu trabalho e faça as configurações finais para que o Jenkins jogue a imagem no Docker Hub a cada build.
 
 --- 
-
-Essa organização mantém os passos claros e diretos para a instalação e configuração do JDK, Jenkins e Docker.
