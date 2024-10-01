@@ -16,30 +16,43 @@
 1. Acesse o link abaixo e faça o download do Jenkins:
 
    [Download Jenkins](https://www.jenkins.io/download/#downloading-jenkins)
+   
+![Captura de tela 2024-10-01 083913](https://github.com/user-attachments/assets/36a196bb-c938-4e76-9d0d-af50617549d2)
 
-2. Acesse o Jenkins de acordo com a porta configurada na instalação.
+3. Acesse o Jenkins de acordo com a porta configurada na instalação.
 
-3. Copie a senha de primeiro acesso no caminho de exemplo:
+4. Copie a senha de primeiro acesso no caminho de exemplo:
 
    ```
    C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword
    ```
 
-4. Coloque a senha no Jenkins e avance.
+5. Coloque a senha no Jenkins e avance.
+   
+![Captura de tela 2024-10-01 084655](https://github.com/user-attachments/assets/36f14a36-c8be-4520-9d46-7431f084929a)
 
-5. Selecione "Instalar as extensões sugeridas".
 
-6. Após a instalação dos recursos, preencha os campos do usuário administrador para acesso à plataforma.
+7. Selecione "Instalar as extensões sugeridas".
+   
+![Captura de tela 2024-10-01 085033](https://github.com/user-attachments/assets/cf7ef09a-7bb8-40a9-876e-48425d1aa19d)
+
+9. Após a instalação dos recursos, preencha os campos do usuário administrador para acesso à plataforma.
+    
+![Captura de tela 2024-10-01 085625](https://github.com/user-attachments/assets/cfa98d8b-b2b3-40f0-9980-5bf8bde9f460)
 
 ---
 
 # Configuração Inicial do Jenkins
 
 1. Defina a rota para requisições ao Jenkins.
+   
+![Captura de tela 2024-10-01 085700](https://github.com/user-attachments/assets/fe83c9cc-b070-4c73-914e-b8e9565fb5ec)
 
-2. Acesse a plataforma.
+3. Acesse a plataforma.
 
-3. Na tela inicial do Jenkins ("Painel de Controle"), selecione a opção "Criar um novo trabalho".
+4. Na tela inicial do Jenkins ("Painel de Controle"), selecione a opção "Criar um novo trabalho".
+   
+![Captura de tela 2024-10-01 085933](https://github.com/user-attachments/assets/84892e5d-0241-40ac-9a55-ca4ff17dbab4)
 
 ---
 
