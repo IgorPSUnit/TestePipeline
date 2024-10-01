@@ -6,6 +6,9 @@
 
 2. Execute o instalador e siga até o final.
 
+   ![Captura de tela 2024-10-01 083658](https://github.com/user-attachments/assets/e4c220e6-9734-4d4d-9d96-de59dd8cc101)
+
+
 ---
 
 # Instalação do Jenkins
