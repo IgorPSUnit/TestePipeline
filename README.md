@@ -191,7 +191,7 @@
        # scheme defaults to 'http'.
 
        static_configs:
-         - targets: ["localhost:9090"]
+         - targets: ["localhost:3030"]
    ```
 
    > **Nota:** No campo `targets`, você deve colocar a rota da instância do jenkins.
