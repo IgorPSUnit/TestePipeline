@@ -166,3 +166,88 @@
 - Após o build, verifique a imagem no Docker Desktop na aba de **Imagens**.
 
 - A imagem também aparecerá no Docker Hub, na aba de imagens, confirmando que o push foi realizado pelo Jenkins.
+
+
+# Integração do Jenkins com Prometheus e Grafana
+
+## Download e Configuração do Prometheus
+
+1. Acesse o site do Prometheus e faça o download da versão LTS para o seu sistema operacional:
+
+   [Download Prometheus](https://prometheus.io/download/)
+
+2. Extraia o arquivo ZIP.
+
+3. Acesse a pasta extraída.
+
+4. Abra o arquivo `prometheus.yml` e faça as seguintes alterações:
+
+   ```yaml
+   scrape_configs:
+     # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+     - job_name: "jenkins"
+
+       metrics_path: "/prometheus"
+       # scheme defaults to 'http'.
+
+       static_configs:
+         - targets: ["localhost:9090"]
+   ```
+
+   > **Nota:** No campo `targets`, você pode colocar outra rota, mas lembre-se de que ela deve estar disponível.
+
+5. Após fazer as alterações, execute o `prometheus.exe`.
+
+## Instalação do Plugin Prometheus no Jenkins
+
+1. Acesse o Jenkins pelo painel de controle.
+
+2. Navegue até **Gerenciar Jenkins > Plugins**.
+
+3. Vá para a aba **Extensões disponíveis** e procure por **Prometheus metrics** e instale.
+
+4. Marque a opção de reiniciar após a instalação.
+
+5. Após reentrar no Jenkins, tente acessar a rota do Prometheus:
+
+   ```
+   http://localhost:<sua_porta>/prometheus/
+   ```
+
+   Se as métricas forem exibidas, a configuração está funcionando.
+
+## Configuração do Grafana
+
+1. Baixe o aplicativo Grafana de acordo com o seu sistema operacional:
+
+   [Download Grafana](https://grafana.com/grafana/download)
+
+2. Execute o instalador e siga até o final.
+
+3. Por padrão, o Grafana estará disponível em:
+
+   ```
+   http://localhost:3000/login
+   ```
+
+4. No primeiro acesso, digite qualquer credencial. Ele irá gerar um erro e pedir para inserir novas credenciais. Após isso, use:
+
+   - **Usuário:** admin
+   - **Senha:** a que você escolher
+
+5. Após acessar o Grafana, vá ao menu e selecione **Connections**.
+
+6. Procure por **Prometheus**, selecione e clique em **Add new data source**.
+
+7. Configure a porta do Prometheus, informando onde ele está rodando (no seu caso, `localhost:9090`).
+
+8. Clique em **Save & Test**.
+
+9. Em caso de sucesso, retorne ao menu e selecione **Dashboards**.
+
+10. Selecione **Create Dashboard**.
+
+11. Você pode optar por importar um dashboard ou criar um novo. Se você importar um:
+
+    - Adicione o ID do dashboard importado.
+    - Selecione a sua base do Prometheus e clique em **Import**.
